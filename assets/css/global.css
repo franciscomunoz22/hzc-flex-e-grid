@@ -1,0 +1,56 @@
+:root {
+    /*cores*/
+    --botão: #0480DC;
+    --cabeçalho: #1D232A;
+    --cabeçalho-mobile: #15191C;
+    --cartão: #2C343A;
+    --corpo: #1D232A;
+    --fonte: #ffffff;
+    --fonte-alternativa: #95999C;
+    --links: #0480DC;
+    --menu-lateral: #15191C;
+    --sombras: 0px 4px 4px rgba(0, 0, 0, 0.16);
+
+    /*fontes*/
+    --fonte-principal: 'Open Sans', 'icones', sans-serif;
+}
+
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body {
+    background-color: var(--corpo);
+    color: var(--fonte);
+    font-family: var(--fonte-principal)
+}
+
+main {
+    display: grid;
+    gap: 16px;
+    padding: 24px 16px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    main {
+        column-gap: 32px;
+        display: grid;
+        grid-column: 2;
+        grid-template-areas:
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "destaque-video destaque-video videos-recentes"
+            "secao-videos secao-videos secao-videos"
+            "produtos-recentes destaque-produtos destaque-produtos"
+            "secao-produtos secao-produtos secao-produtos"
+        ;
+        grid-template-columns: auto 1fr auto;
+        padding: 16px 60px;
+    }
+}
+
